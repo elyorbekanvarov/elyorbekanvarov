@@ -30,7 +30,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         <div style={{ textAlign: "center", marginBottom: "30px" }}>
           <h2>Portfolio Admin</h2>
         </div>
-        
         <div style={{ padding: "0 16px" }}>
           {menuItems.map((item) => (
             <div
@@ -46,15 +45,12 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
                 marginBottom: "4px",
                 color: "#9ca3af",
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(79,70,229,0.2)"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
             >
               <span>{item.icon}</span>
               {item.name}
             </div>
           ))}
         </div>
-        
         <div style={{ padding: "20px" }}>
           <button
             onClick={() => router.push("/login")}
@@ -72,7 +68,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           </button>
         </div>
       </div>
-      
       <div style={{ flex: 1, marginLeft: "260px", padding: "30px", background: "#f3f4f6" }}>
         {children}
       </div>
