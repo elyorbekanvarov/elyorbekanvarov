@@ -57,7 +57,7 @@ export default function GetInTouch() {
           <form className="section6-contact" onSubmit={handleSubmit}>
             <label>
               Name
-              <input
+              <input id="input"
                 type="text"
                 name="name"
                 placeholder="Your name"
@@ -70,6 +70,7 @@ export default function GetInTouch() {
             <label>
               Email
               <input
+              id="input"
                 type="email"
                 name="email"
                 placeholder="your.email@example.com"
@@ -82,6 +83,7 @@ export default function GetInTouch() {
             <label>
               Subject
               <input
+              id="input"
                 type="text"
                 name="subject"
                 placeholder="What is this about?"
@@ -93,6 +95,7 @@ export default function GetInTouch() {
             <label>
               Message
               <textarea
+              id="input"
                 name="message"
                 placeholder="Tell me about your project..."
                 value={formData.message}

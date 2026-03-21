@@ -1202,14 +1202,10 @@ footer {
     width: 100%;
   }
 }
-
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
-
-  /* Navbar */
   .nav {
     flex-direction: column;
     gap: 16px;
@@ -1224,8 +1220,6 @@ footer {
   .hire-me a {
     padding: 8px 20px;
   }
-
-  /* Hero Section */
   .section1 {
     margin-top: 80px;
   }
@@ -1325,8 +1319,6 @@ footer {
   .section4-card .p p {
     font-size: 10px;
   }
-
-  /* Experience */
   .experience-section {
     padding: 60px 0;
   }
@@ -1364,8 +1356,6 @@ footer {
   .year {
     font-size: 10px;
   }
-
-  /* Awards */
   .awards-section {
     padding: 24px;
   }
@@ -1420,8 +1410,6 @@ footer {
     width: 20px;
     height: 20px;
   }
-
-  /* Footer */
   .footer-wrapper {
     flex-direction: column;
     gap: 16px;
@@ -1598,5 +1586,59 @@ footer {
   textarea,
   select {
     font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  .auth-panel {
+    border-radius: 48px !important;
+  }
+  .auth-decoration {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-panel {
+    padding: 32px 24px !important;
+  }
+  .auth-header h1 {
+    font-size: 28px !important;
+  }
+  .auth-header p {
+    font-size: 13px !important;
+  }
+  .input-icon input {
+    padding: 12px 12px 12px 0 !important;
+  }
+  .auth-button {
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-panel {
+    padding: 24px 20px !important;
+  }
+  .auth-header h1 {
+    font-size: 24px !important;
+  }
+  .input-group label {
+    font-size: 12px !important;
+  }
+  .input-icon span {
+    font-size: 16px !important;
+    padding: 0 10px !important;
+  }
+  .input-icon input {
+    font-size: 13px !important;
+    padding: 10px 10px 10px 0 !important;
+  }
+  .demo-row code {
+    font-size: 10px !important;
+    padding: 2px 8px !important;
   }
 }
