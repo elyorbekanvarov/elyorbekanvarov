@@ -9,7 +9,7 @@ export const projects: Project[] = [
     image: "/images/png/connect-co.png",
     image_url: "/images/png/connect-co.png",
     liveLink: "https://searchmyexpert.com",
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/elyorbekanvarov/connect-co",
   },
   {
     id: 2,
@@ -18,6 +18,8 @@ export const projects: Project[] = [
     technologies: "React, Recharts, API",
     image: "/images/png/dashboard.png",
     image_url: "/images/png/dashboard.png",
+    liveLink: "https://dashboard-demo.com",
+    githubLink: "https://github.com/elyorbekanvarov/analytics-dashboard",
   },
   {
     id: 3,
@@ -26,6 +28,8 @@ export const projects: Project[] = [
     technologies: "React Native, UI/UX, Mobile",
     image: "/images/png/banking.png",
     image_url: "/images/png/banking.png",
+    liveLink: "https://banking-app-demo.com",
+    githubLink: "https://github.com/elyorbekanvarov/mobile-banking",
   },
   {
     id: 4,
@@ -34,5 +38,7 @@ export const projects: Project[] = [
     technologies: "React, Node.js, MongoDB",
     image: "/images/png/webapp.png",
     image_url: "/images/png/webapp.png",
+    liveLink: "https://webapp-suite.com",
+    githubLink: "https://github.com/elyorbekanvarov/webapp-suite",
   },
 ];

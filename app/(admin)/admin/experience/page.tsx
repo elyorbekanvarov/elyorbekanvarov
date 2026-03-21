@@ -275,6 +275,7 @@ export default function ExperiencePage() {
                 border: "1px solid #e5e7eb",
                 borderRadius: "12px",
                 marginBottom: "20px",
+                resize: "none",
               }}
               required
             />

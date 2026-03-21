@@ -53,14 +53,8 @@ export default function AboutPage() {
         });
         setMessage({ type: "success", text: "Created successfully!" });
       }
-      
-      // Formani tozalash
       setForm({ name: "", role: "", bio: "" });
-      
-      // Ma'lumotlarni qayta yuklash
       await fetchAbout();
-      
-      // 3 sekunddan keyin xabarni o'chirish
       setTimeout(() => setMessage(null), 3000);
     } catch (error) {
       console.error("Error saving about:", error);
@@ -146,7 +140,7 @@ export default function AboutPage() {
               border: "1px solid #e5e7eb",
               borderRadius: "12px",
               boxSizing: "border-box",
-              resize: "vertical",
+              resize: "none",
               fontFamily: "inherit",
             }}
           />

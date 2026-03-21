@@ -7,6 +7,8 @@ export interface Project {
   image_url?: string;
   githubLink?: string;
   liveLink?: string;
+  demo_link?: string;
+  repo_link?: string;
   created_at?: string;
 }
 
