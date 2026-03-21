@@ -1,5 +1,4 @@
 import api from "../axios";
-
 export const AuthService = {
   login: async (data: { username: string; password: string }) => {
     try {
@@ -20,7 +19,6 @@ export const AuthService = {
           }),
         );
       }
-
       return res.data;
     } catch (error: any) {
       console.error("Login error:", error.response?.data);
@@ -77,13 +75,10 @@ export const AuthService = {
       }),
     );
   },
-
   getToken: () => localStorage.getItem("token"),
-
   getUser: () => {
     const user = localStorage.getItem("user");
     return user ? JSON.parse(user) : null;
   },
-
   isAuthenticated: () => !!localStorage.getItem("token"),
 };

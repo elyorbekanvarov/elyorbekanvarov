@@ -1080,3 +1080,523 @@ footer {
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 0 20px;
+  }
+
+  .section1-two-divs {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .section1-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section1-title h1 {
+    width: auto;
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .section1-title p {
+    font-size: 20px;
+  }
+
+  .section1-img img {
+    width: 380px;
+    height: 380px;
+  }
+
+  .section1-bottom {
+    margin-top: 60px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .section4-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 20px 20px 20px 80px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-icon,
+  .timeline-item.right .timeline-icon {
+    left: 30px;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+
+  .timeline-item.right .timeline-icon {
+    left: 30px;
+  }
+
+  .awards-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .award {
+    width: 100%;
+    max-width: 304px;
+  }
+
+  .section6-contacts {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-information-wrapper {
+    margin-top: 0;
+  }
+
+  .contact-information,
+  .connect,
+  .available {
+    margin-top: 24px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cards-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .two-sections {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Navbar */
+  .nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hire-me a {
+    padding: 8px 20px;
+  }
+
+  /* Hero Section */
+  .section1 {
+    margin-top: 80px;
+  }
+
+  .hello-title {
+    width: 180px;
+    height: 36px;
+  }
+
+  .hello-title span {
+    font-size: 14px;
+  }
+
+  .section1-title h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .section1-title p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .section1-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .section1-btns button {
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  .section1-img img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .section1-links {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .section1-bottom {
+    margin-top: 40px;
+  }
+  .section2-wrapper h2,
+  .section3 h2,
+  .section4 h2,
+  .experience-title,
+  .section6 h2 {
+    font-size: 32px;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .skill-icon {
+    margin: 0 auto 20px auto;
+  }
+
+  .technical {
+    padding: 24px;
+  }
+
+  .technical h3 {
+    font-size: 20px;
+  }
+
+  .tech-info {
+    font-size: 14px;
+  }
+
+  .section4-card-title {
+    padding: 24px 20px 20px 20px;
+  }
+
+  .section4-card-title span {
+    font-size: 20px;
+  }
+
+  .section4-card-title > p {
+    font-size: 14px;
+  }
+
+  .section4-card .p {
+    flex-wrap: wrap;
+  }
+
+  .section4-card .p p {
+    font-size: 10px;
+  }
+
+  /* Experience */
+  .experience-section {
+    padding: 60px 0;
+  }
+
+  .experience-title {
+    margin-bottom: 48px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-card h3 {
+    font-size: 18px;
+  }
+
+  .timeline-card h4 {
+    font-size: 14px;
+  }
+
+  .timeline-card p {
+    font-size: 14px;
+  }
+
+  .timeline-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .timeline-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .year {
+    font-size: 10px;
+  }
+
+  /* Awards */
+  .awards-section {
+    padding: 24px;
+  }
+
+  .awards-title {
+    font-size: 20px;
+  }
+
+  .award h4 {
+    font-size: 14px;
+  }
+
+  .award p {
+    font-size: 12px;
+  }
+  .section6 {
+    padding: 60px 0;
+  }
+
+  .section6 p {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
+  .section6-contact input,
+  .section6-contact textarea {
+    padding: 12px;
+  }
+
+  .contact-information,
+  .connect,
+  .available {
+    padding: 24px;
+  }
+
+  .contact-information h4,
+  .connect h4,
+  .available h4 {
+    font-size: 20px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+
+  .connect-link {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .connect-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Footer */
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding-top: 24px;
+  }
+
+  .footer-links {
+    gap: 16px;
+  }
+
+  .footer-title p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section1-title h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .section1-title p {
+    font-size: 14px;
+  }
+
+  .section1-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .section2-wrapper h2,
+  .section3 h2,
+  .section4 h2,
+  .experience-title,
+  .section6 h2 {
+    font-size: 28px;
+  }
+
+  .skill {
+    padding: 20px;
+  }
+
+  .skill span {
+    font-size: 18px;
+  }
+
+  .skill p {
+    font-size: 14px;
+  }
+
+  .technical h3 {
+    font-size: 18px;
+  }
+
+  .tech-info {
+    font-size: 12px;
+  }
+
+  .section4-card-title span {
+    font-size: 18px;
+  }
+
+  .timeline-item {
+    padding: 16px 16px 16px 70px;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .timeline-card h3 {
+    font-size: 16px;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .timeline-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-item.left .timeline-icon,
+  .timeline-item.right .timeline-icon {
+    left: 25px;
+  }
+
+  .timeline::before {
+    left: 25px;
+  }
+
+  .award {
+    max-width: 100%;
+  }
+
+  .connect-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact {
+    gap: 12px;
+  }
+
+  .contact-img img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info h5 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .section1-img img {
+    width: 420px;
+    height: 420px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section4-cards {
+    gap: 24px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .section1-img img {
+    width: 550px;
+    height: 550px;
+  }
+
+  .section1-title h1 {
+    width: 450px;
+    font-size: 84px;
+    line-height: 84px;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section4-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (hover: hover) {
+  .skill:hover,
+  .section4-card:hover {
+    transform: translateY(-5px);
+  }
+}
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
