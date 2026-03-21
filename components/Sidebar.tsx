@@ -27,78 +27,84 @@ export default function Sidebar({ onLogout, user }: SidebarProps) {
         height: "100vh",
         background: "linear-gradient(180deg, #1f2937 0%, #111827 100%)",
         color: "white",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
         position: "fixed",
         left: 0,
         top: 0,
-        padding: "20px 0",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <div>
-        {user && (
-          <div style={{
-            padding: "16px 20px",
-            borderBottom: "1px solid rgba(255,255,255,0.1)",
-            marginBottom: "20px",
-          }}>
-            <div style={{
-              width: "48px",
-              height: "48px",
-              background: "#4f46e5",
-              borderRadius: "50%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "12px",
-              fontSize: "20px",
-            }}>
-              {user.name?.charAt(0) || "A"}
-            </div>
-            <div style={{ fontWeight: "bold", fontSize: "14px" }}>{user.name}</div>
-            <div style={{ fontSize: "11px", color: "#9ca3af" }}>{user.email}</div>
-          </div>
-        )}
-        <div style={{ padding: "0 16px" }}>
-          {menuItems.map((item) => {
-            const isActive = pathname === item.path;
-            return (
-              <Link
-                key={item.name}
-                href={item.path}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "12px",
-                  padding: "12px 16px",
-                  textDecoration: "none",
-                  color: isActive ? "#fff" : "#9ca3af",
-                  backgroundColor: isActive ? "#4f46e5" : "transparent",
-                  borderRadius: "10px",
-                  fontSize: "14px",
-                  marginBottom: "4px",
-                }}
-              >
-                <span>{item.icon}</span>
-                {item.name}
-              </Link>
-            );
-          })}
-        </div>
+      <div style={{ padding: "24px 20px", borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
+        <h2 style={{ fontSize: "20px", fontWeight: "bold", margin: 0 }}>Portfolio Admin</h2>
       </div>
-      <div style={{ padding: "0 20px 20px 20px" }}>
+      {user && (
+        <div style={{
+          padding: "16px 20px",
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
+        }}>
+          <div style={{
+            width: "40px",
+            height: "40px",
+            background: "#4f46e5",
+            borderRadius: "50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: "10px",
+            fontSize: "18px",
+          }}>
+            {user.name?.charAt(0) || user.email?.charAt(0) || "A"}
+          </div>
+          <div style={{ fontWeight: "bold", fontSize: "14px" }}>{user.name || user.email}</div>
+          <div style={{ fontSize: "11px", color: "#9ca3af", marginTop: "4px" }}>{user.email}</div>
+        </div>
+      )}
+      <div style={{ 
+        flex: 1,
+        overflowY: "auto",
+        padding: "16px",
+      }}>
+        {menuItems.map((item) => {
+          const isActive = pathname === item.path;
+          return (
+            <Link
+              key={item.name}
+              href={item.path}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                padding: "10px 12px",
+                textDecoration: "none",
+                color: isActive ? "#fff" : "#9ca3af",
+                backgroundColor: isActive ? "#4f46e5" : "transparent",
+                borderRadius: "8px",
+                fontSize: "14px",
+                marginBottom: "4px",
+              }}
+            >
+              <span style={{ fontSize: "18px" }}>{item.icon}</span>
+              {item.name}
+            </Link>
+          );
+        })}
+      </div>
+      <div style={{ 
+        padding: "16px",
+        borderTop: "1px solid rgba(255,255,255,0.1)",
+      }}>
         <button
           onClick={onLogout}
           style={{
             width: "100%",
-            padding: "12px",
-            borderRadius: "10px",
+            padding: "10px",
+            borderRadius: "8px",
             border: "none",
             background: "#dc2626",
             color: "white",
             cursor: "pointer",
             fontWeight: "500",
+            fontSize: "14px",
           }}
         >
           🔓 Logout

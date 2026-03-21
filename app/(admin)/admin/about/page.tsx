@@ -8,6 +8,7 @@ export default function AboutPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState({ name: "", role: "", bio: "" });
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   const fetchAbout = async () => {
     try {
@@ -34,31 +35,37 @@ export default function AboutPage() {
 
   const handleSave = async () => {
     setSaving(true);
+    setMessage(null);
+    
     try {
       if (about?.id) {
-        // PUT so'rovi
-        const result = await AboutService.putAbout(about.id, {
+        await AboutService.putAbout(about.id, {
           name: form.name,
           role: form.role,
           bio: form.bio,
         });
-        console.log("Update result:", result);
-        alert("Saved successfully!");
+        setMessage({ type: "success", text: "Saved successfully!" });
       } else {
-        // POST so'rovi
-        const result = await AboutService.postAbout({
+        await AboutService.postAbout({
           name: form.name,
           role: form.role,
           bio: form.bio,
         });
-        console.log("Create result:", result);
-        alert("Created successfully!");
+        setMessage({ type: "success", text: "Created successfully!" });
       }
-      fetchAbout();
-    } catch (error: any) {
+      
+      // Formani tozalash
+      setForm({ name: "", role: "", bio: "" });
+      
+      // Ma'lumotlarni qayta yuklash
+      await fetchAbout();
+      
+      // 3 sekunddan keyin xabarni o'chirish
+      setTimeout(() => setMessage(null), 3000);
+    } catch (error) {
       console.error("Error saving about:", error);
-      console.error("Error response:", error.response?.data);
-      alert(`Error: ${error.response?.data?.message || "Please try again."}`);
+      setMessage({ type: "error", text: "Error saving. Please try again." });
+      setTimeout(() => setMessage(null), 3000);
     } finally {
       setSaving(false);
     }
@@ -73,6 +80,20 @@ export default function AboutPage() {
       <h1 style={{ fontSize: "28px", fontWeight: "bold", marginBottom: "30px" }}>
         About Me
       </h1>
+      
+      {message && (
+        <div style={{
+          padding: "12px 16px",
+          borderRadius: "12px",
+          marginBottom: "20px",
+          backgroundColor: message.type === "success" ? "#d4edda" : "#f8d7da",
+          color: message.type === "success" ? "#155724" : "#721c24",
+          border: `1px solid ${message.type === "success" ? "#c3e6cb" : "#f5c6cb"}`,
+        }}>
+          {message.text}
+        </div>
+      )}
+      
       <div style={{ background: "white", borderRadius: "20px", padding: "30px" }}>
         <div style={{ marginBottom: "20px" }}>
           <label style={{ display: "block", marginBottom: "8px", fontWeight: "500" }}>
@@ -86,7 +107,9 @@ export default function AboutPage() {
               padding: "12px",
               border: "1px solid #e5e7eb",
               borderRadius: "12px",
+              boxSizing: "border-box",
             }}
+            placeholder="Enter your name"
           />
         </div>
 
@@ -103,6 +126,7 @@ export default function AboutPage() {
               padding: "12px",
               border: "1px solid #e5e7eb",
               borderRadius: "12px",
+              boxSizing: "border-box",
             }}
           />
         </div>
@@ -115,11 +139,15 @@ export default function AboutPage() {
             rows={8}
             value={form.bio}
             onChange={(e) => setForm({ ...form, bio: e.target.value })}
+            placeholder="Write something about yourself..."
             style={{
               width: "100%",
               padding: "12px",
               border: "1px solid #e5e7eb",
               borderRadius: "12px",
+              boxSizing: "border-box",
+              resize: "vertical",
+              fontFamily: "inherit",
             }}
           />
         </div>
@@ -134,6 +162,15 @@ export default function AboutPage() {
             border: "none",
             borderRadius: "12px",
             cursor: "pointer",
+            fontWeight: "500",
+            opacity: saving ? 0.7 : 1,
+            transition: "background 0.2s",
+          }}
+          onMouseEnter={(e) => {
+            if (!saving) e.currentTarget.style.background = "#4338ca";
+          }}
+          onMouseLeave={(e) => {
+            if (!saving) e.currentTarget.style.background = "#4f46e5";
           }}
         >
           {saving ? "Saving..." : "Save Changes"}

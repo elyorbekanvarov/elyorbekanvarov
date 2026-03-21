@@ -1,8 +1,6 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { SkillsService, Skill } from "@/lib/api/skillsServices";
-
 export default function TechnicalSkills() {
   const [techSkills, setTechSkills] = useState<Skill[]>([]);
   const [loading, setLoading] = useState(true);
@@ -25,22 +23,21 @@ export default function TechnicalSkills() {
   if (loading) {
     return <p>Loading technical skills...</p>;
   }
-
   return (
     <div className="technical">
       <h3>Technical Proficiency</h3>
       <div className="tech-grid">
         {techSkills.length > 0 ? (
-          techSkills.map((tech) => (
-            <div className="tech-item" key={tech.id}>
+          techSkills.map((skill) => (
+            <div className="tech-item" key={skill.id}>
               <div className="tech-info">
-                <span>{tech.name}</span>
-                <span id="foiz">{tech.percentage || 0}%</span>
+                <span>{skill.name}</span>
+                <span id="foiz">{skill.percentage || 0}%</span>
               </div>
               <div className="progress">
                 <div
                   className="bar"
-                  style={{ width: `${tech.percentage || 0}%` }}
+                  style={{ width: `${skill.percentage || 0}%` }}
                 ></div>
               </div>
             </div>

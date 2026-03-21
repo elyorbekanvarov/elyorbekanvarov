@@ -7,8 +7,8 @@ export interface Project {
   technologies: string;
   image?: File | string | null;
   image_url?: string;
-  githubLink?: string;
-  liveLink?: string;
+  demo_link?: string;
+  repo_link?: string;
 }
 
 export const ProjectsService = {
@@ -29,8 +29,8 @@ export const ProjectsService = {
       if (value !== undefined && value !== null && value !== "") {
         if (key === 'image' && value instanceof File) {
           formData.append('image', value);
-        } else if (typeof value === 'string') {
-          formData.append(key, value);
+        } else if (typeof value === 'string' || typeof value === 'number') {
+          formData.append(key, String(value));
         }
       }
     });
@@ -47,8 +47,8 @@ export const ProjectsService = {
       if (value !== undefined && value !== null && value !== "") {
         if (key === 'image' && value instanceof File) {
           formData.append('image', value);
-        } else if (typeof value === 'string') {
-          formData.append(key, value);
+        } else if (typeof value === 'string' || typeof value === 'number') {
+          formData.append(key, String(value));
         }
       }
     });

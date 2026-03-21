@@ -25,7 +25,7 @@ export const socialLinks: SocialLink[] = [
     label: "GitHub",
   },
   {
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/feed/",
     icon: "/images/svg/linkedin.svg",
     label: "LinkedIn",
   },

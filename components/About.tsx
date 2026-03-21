@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { AboutService } from "@/lib/api/aboutServices";
 import Image from "next/image";
+import { aboutData } from "@/data/about";
+
 interface AboutItem {
   id: number;
   name: string;
@@ -19,10 +21,29 @@ export default function About() {
     const fetchAbout = async () => {
       try {
         const data = await AboutService.getAbout();
-        console.log("About data:", data);
-        setAboutData(data as AboutItem[]);
+        console.log("About data from backend:", data);
+        
+        if (data && data.length > 0) {
+          setAboutData(data as AboutItem[]);
+        } else {
+          // Mock data
+          setAboutData([{
+            id: 1,
+            name: "Elyorbek Anvarov",
+            role: "Frontend Developer",
+            bio: "I'm a passionate Frontend Developer with a strong focus on creating beautiful, functional, and user-friendly web experiences. With expertise in modern web technologies, I transform ideas into reality.",
+            image: "/images/png/about.png"
+          }]);
+        }
       } catch (err) {
         console.error("Error fetching about:", err);
+        setAboutData([{
+          id: 1,
+          name: "Elyorbek Anvarov",
+          role: "Frontend Developer",
+          bio: "I'm a passionate Frontend Developer with a strong focus on creating beautiful, functional, and user-friendly web experiences.",
+          image: "/images/png/about.png"
+        }]);
       } finally {
         setLoading(false);
       }

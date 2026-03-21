@@ -1,7 +1,7 @@
 import api from "../axios";
 
 export interface About {
-  id: number;
+  id?: number;
   name: string;
   role?: string;
   bio: string;

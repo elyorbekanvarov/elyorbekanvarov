@@ -1,7 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import { heroData } from "@/data/hero";
 
 export default function Hero() {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="section1 container">
       <div className="section1-two-divs">
@@ -13,8 +29,8 @@ export default function Hero() {
           <p>{heroData.description}</p>
 
           <div className="section1-btns">
-            <button>View My Work</button>
-            <button>Contact Me</button>
+            <button onClick={scrollToProjects}>View My Work</button>
+            <button onClick={scrollToContact}>Contact Me</button>
           </div>
 
           <div className="section1-links">
@@ -37,6 +53,8 @@ export default function Hero() {
             alt={heroData.image.alt}
             width={506}
             height={504}
+            priority
+            loading="eager"
           />
         </div>
       </div>
