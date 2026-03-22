@@ -6,17 +6,17 @@ export const footerData: FooterData = {
     {
       id: 1,
       icon: "/images/svg/github.svg",
-      url: "https://github.com",
+      url: "https://github.com/elyorbekanvarov",
     },
     {
       id: 2,
       icon: "/images/svg/linkedin.svg",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/feed/",
     },
     {
       id: 3,
       icon: "/images/svg/telegram.svg",
-      url: "https://t.me",
+      url: "https://t.me/anvarov_elyor",
     },
   ],
 };

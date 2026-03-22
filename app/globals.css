@@ -653,7 +653,7 @@ ul a:hover {
   flex-wrap: wrap;
 }
 
-.section4-card-btns button {
+.section4-card-btns a {
   flex: 1;
   height: 36px;
   border-radius: 14px;
@@ -662,7 +662,6 @@ ul a:hover {
   justify-content: center;
   gap: 16px;
   transition: 0.25s;
-
   span {
     margin-top: 10px;
     font-weight: 500;
@@ -671,16 +670,16 @@ ul a:hover {
   }
 }
 
-.section4-card-btns button:nth-child(1) {
+.section4-card-btns a:nth-child(1) {
   background: linear-gradient(90deg, #7c3aed, #9333ea);
   color: white;
 }
 
-.section4-card-btns button:nth-child(1):hover {
+.section4-card-btns a:nth-child(1):hover {
   opacity: 0.9;
 }
 
-.section4-card-btns button:nth-child(2) {
+.section4-card-btns a:nth-child(2) {
   background: white;
 
   span {
@@ -688,11 +687,11 @@ ul a:hover {
   }
 }
 
-.section4-card-btns button:nth-child(2):hover {
+.section4-card-btns a:nth-child(2):hover {
   background: #e5e7eb;
 }
 
-.section4-card-btns button img {
+.section4-card-btns a img {
   width: 16px;
   height: 16px;
 }
@@ -1586,59 +1585,5 @@ footer {
   textarea,
   select {
     font-size: 16px;
-  }
-}
-@media (max-width: 900px) {
-  .auth-wrapper {
-    grid-template-columns: 1fr !important;
-  }
-  .auth-panel {
-    border-radius: 48px !important;
-  }
-  .auth-decoration {
-    display: none !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .auth-panel {
-    padding: 32px 24px !important;
-  }
-  .auth-header h1 {
-    font-size: 28px !important;
-  }
-  .auth-header p {
-    font-size: 13px !important;
-  }
-  .input-icon input {
-    padding: 12px 12px 12px 0 !important;
-  }
-  .auth-button {
-    padding: 12px !important;
-    font-size: 14px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .auth-panel {
-    padding: 24px 20px !important;
-  }
-  .auth-header h1 {
-    font-size: 24px !important;
-  }
-  .input-group label {
-    font-size: 12px !important;
-  }
-  .input-icon span {
-    font-size: 16px !important;
-    padding: 0 10px !important;
-  }
-  .input-icon input {
-    font-size: 13px !important;
-    padding: 10px 10px 10px 0 !important;
-  }
-  .demo-row code {
-    font-size: 10px !important;
-    padding: 2px 8px !important;
   }
 }

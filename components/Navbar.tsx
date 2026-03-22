@@ -25,7 +25,7 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="hire-me">
-          <Link href={"login"}>Hire Me</Link>
+          <Link href={"login"}>Login</Link>
         </div>
       </div>
     </nav>
