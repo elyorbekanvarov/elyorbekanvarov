@@ -12,9 +12,13 @@ export default function SkillsPage() {
     name: "",
     description: "",
     percentage: 50,
+<<<<<<< HEAD
     skillType: "technical",
   });
 
+=======
+  });
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   const fetchSkills = async () => {
     try {
       const data = await SkillsService.getSkills();
@@ -32,6 +36,7 @@ export default function SkillsPage() {
 
   const handleSave = async () => {
     try {
+<<<<<<< HEAD
       const payload: Partial<Skill> = {
         name: form.name,
         description: form.description || "",
@@ -43,6 +48,13 @@ export default function SkillsPage() {
         payload.percentage = 0;
       }
 
+=======
+      const payload = {
+        name: form.name,
+        description: form.description || "",
+        percentage: form.percentage,
+      };
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       if (editing) {
         await SkillsService.putSkill(editing.id!, payload);
       } else {
@@ -51,12 +63,16 @@ export default function SkillsPage() {
       fetchSkills();
       setShowModal(false);
       setEditing(null);
+<<<<<<< HEAD
       setForm({
         name: "",
         description: "",
         percentage: 50,
         skillType: "technical",
       });
+=======
+      setForm({ name: "", description: "", percentage: 50 });
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
     } catch (error: any) {
       console.error("Error saving skill:", error);
       alert("Error saving skill");
@@ -98,15 +114,22 @@ export default function SkillsPage() {
       </div>
     );
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   return (
     <div className="skills-page">
       <div className="page-header">
         <div>
           <h1>Skills Library</h1>
+<<<<<<< HEAD
           <p>
             Manage soft skills (card view) and technical skills (progress bar)
           </p>
+=======
+          <p>Organize and manage your technical expertise</p>
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         </div>
         <button className="btn-create" onClick={() => setShowModal(true)}>
           <svg
@@ -116,12 +139,18 @@ export default function SkillsPage() {
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
+<<<<<<< HEAD
+=======
+            strokeLinecap="round"
+            strokeLinejoin="round"
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           >
             <path d="M12 5v14M5 12h14" />
           </svg>
           New Skill
         </button>
       </div>
+<<<<<<< HEAD
 
       <div className="skills-grid">
         {skills.map((skill) => (
@@ -134,6 +163,14 @@ export default function SkillsPage() {
                 <span className="skill-icon">
                   {skill.category === "soft" ? "✨" : "💻"}
                 </span>
+=======
+      <div className="skills-grid">
+        {skills.map((skill) => (
+          <div key={skill.id} className="skill-card">
+            <div className="skill-card-header">
+              <div className="skill-icon-wrapper">
+                <span className="skill-icon">💻</span>
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
               </div>
               <div className="skill-actions">
                 <button
@@ -144,8 +181,11 @@ export default function SkillsPage() {
                       name: skill.name,
                       description: skill.description || "",
                       percentage: skill.percentage || 50,
+<<<<<<< HEAD
                       skillType:
                         skill.category === "soft" ? "soft" : "technical",
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
                     });
                     setShowModal(true);
                   }}
@@ -185,6 +225,7 @@ export default function SkillsPage() {
                 <p className="skill-description">{skill.description}</p>
               )}
               <div className="skill-meta">
+<<<<<<< HEAD
                 <span
                   className={`skill-badge ${skill.category === "soft" ? "soft" : "tech"}`}
                 >
@@ -208,6 +249,17 @@ export default function SkillsPage() {
                 {skill.category === "soft" && (
                   <span className="card-view-badge">📇 Card View</span>
                 )}
+=======
+                <div className="skill-level">
+                  <div className="level-bar">
+                    <div
+                      className="level-fill"
+                      style={{ width: `${skill.percentage || 0}%` }}
+                    ></div>
+                  </div>
+                  <span className="level-value">{skill.percentage || 0}%</span>
+                </div>
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
               </div>
             </div>
           </div>
@@ -249,6 +301,7 @@ export default function SkillsPage() {
                   placeholder="Describe the skill..."
                 />
               </div>
+<<<<<<< HEAD
               <div className="form-group">
                 <label>Skill Type</label>
                 <select
@@ -284,6 +337,27 @@ export default function SkillsPage() {
                   </div>
                 </div>
               )}
+=======
+              <div className="form-group range-group">
+                <label>
+                  Proficiency Level: <strong>{form.percentage}%</strong>
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={form.percentage}
+                  onChange={(e) =>
+                    setForm({ ...form, percentage: parseInt(e.target.value) })
+                  }
+                />
+                <div className="range-marks">
+                  <span>Beginner</span>
+                  <span>Intermediate</span>
+                  <span>Expert</span>
+                </div>
+              </div>
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
             </div>
             <div className="modal-footer">
               <button
@@ -434,6 +508,7 @@ export default function SkillsPage() {
           flex-direction: column;
           gap: 12px;
         }
+<<<<<<< HEAD
         .skill-badge {
           display: inline-block;
           padding: 4px 12px;
@@ -459,6 +534,8 @@ export default function SkillsPage() {
           display: inline-block;
           width: fit-content;
         }
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         .skill-level {
           display: flex;
           align-items: center;
@@ -582,6 +659,12 @@ export default function SkillsPage() {
           box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
           background: white;
         }
+<<<<<<< HEAD
+=======
+        .range-group {
+          margin-top: 8px;
+        }
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         .range-group input {
           padding: 0;
           margin: 12px 0;
@@ -608,6 +691,10 @@ export default function SkillsPage() {
           cursor: pointer;
           font-weight: 500;
           font-size: 14px;
+<<<<<<< HEAD
+=======
+          transition: all 0.2s;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .btn-cancel:hover {
           background: #e2e8f0;
@@ -621,6 +708,10 @@ export default function SkillsPage() {
           cursor: pointer;
           font-weight: 600;
           font-size: 14px;
+<<<<<<< HEAD
+=======
+          transition: all 0.2s;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .btn-save:hover {
           transform: translateY(-1px);

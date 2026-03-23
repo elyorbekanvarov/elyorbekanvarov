@@ -63,6 +63,7 @@ export default function RegisterPage() {
 
   return (
     <div className="auth-card">
+<<<<<<< HEAD
       {/* Back to home button */}
       <Link href="/" className="back-home">
         <svg
@@ -81,6 +82,8 @@ export default function RegisterPage() {
         Back to home
       </Link>
 
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       <div className="auth-brand">
         <div className="brand-icon">✨</div>
         <h2>Portfolio Register</h2>
@@ -164,11 +167,15 @@ export default function RegisterPage() {
           </div>
 
           <button type="submit" disabled={loading} className="auth-button">
+<<<<<<< HEAD
             {loading ? (
               <span className="loading-spinner"></span>
             ) : (
               "Create account"
             )}
+=======
+            {loading ? <span className="loading-spinner"></span> : "Create account"}
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           </button>
         </form>
 
@@ -187,6 +194,7 @@ export default function RegisterPage() {
           border-radius: 32px;
           padding: 48px;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
           position: relative;
         }
         .back-home {
@@ -214,11 +222,16 @@ export default function RegisterPage() {
         }
         .back-home:hover svg {
           transform: translateX(-2px);
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .auth-brand {
           text-align: center;
           margin-bottom: 40px;
+<<<<<<< HEAD
           margin-top: 20px;
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .brand-icon {
           width: 56px;
@@ -342,15 +355,23 @@ export default function RegisterPage() {
         .loading-spinner {
           width: 20px;
           height: 20px;
+<<<<<<< HEAD
           border: 2px solid rgba(255, 255, 255, 0.3);
+=======
+          border: 2px solid rgba(255,255,255,0.3);
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           border-top-color: white;
           border-radius: 50%;
           animation: spin 0.8s linear infinite;
         }
         @keyframes spin {
+<<<<<<< HEAD
           to {
             transform: rotate(360deg);
           }
+=======
+          to { transform: rotate(360deg); }
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .auth-footer {
           text-align: center;
@@ -373,6 +394,7 @@ export default function RegisterPage() {
 
         @media (max-width: 640px) {
           .auth-card {
+<<<<<<< HEAD
             padding: 40px 24px;
           }
           .back-home {
@@ -383,6 +405,9 @@ export default function RegisterPage() {
           }
           .auth-brand {
             margin-top: 16px;
+=======
+            padding: 32px 24px;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
           .auth-brand h2 {
             font-size: 22px;
@@ -400,11 +425,15 @@ export default function RegisterPage() {
 
         @media (max-width: 480px) {
           .auth-card {
+<<<<<<< HEAD
             padding: 32px 20px;
           }
           .back-home {
             top: 12px;
             left: 12px;
+=======
+            padding: 24px 20px;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
           .brand-icon {
             width: 48px;
@@ -431,4 +460,8 @@ export default function RegisterPage() {
       `}</style>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b

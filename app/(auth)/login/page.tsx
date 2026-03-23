@@ -34,6 +34,7 @@ export default function LoginPage() {
 
   return (
     <div className="auth-card">
+<<<<<<< HEAD
       {/* Back to home button */}
       <Link href="/" className="back-home">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -43,6 +44,8 @@ export default function LoginPage() {
         Back to home
       </Link>
 
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       <div className="auth-brand">
         <div className="brand-icon">✨</div>
         <h2>Portfolio Login</h2>
@@ -111,6 +114,7 @@ export default function LoginPage() {
           border-radius: 32px;
           padding: 48px;
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
           position: relative;
         }
         .back-home {
@@ -138,11 +142,16 @@ export default function LoginPage() {
         }
         .back-home:hover svg {
           transform: translateX(-2px);
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .auth-brand {
           text-align: center;
           margin-bottom: 40px;
+<<<<<<< HEAD
           margin-top: 20px;
+=======
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .brand-icon {
           width: 56px;
@@ -290,6 +299,7 @@ export default function LoginPage() {
 
         @media (max-width: 640px) {
           .auth-card {
+<<<<<<< HEAD
             padding: 40px 24px;
           }
           .back-home {
@@ -300,6 +310,9 @@ export default function LoginPage() {
           }
           .auth-brand {
             margin-top: 16px;
+=======
+            padding: 32px 24px;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
           .auth-brand h2 {
             font-size: 22px;
@@ -317,11 +330,15 @@ export default function LoginPage() {
 
         @media (max-width: 480px) {
           .auth-card {
+<<<<<<< HEAD
             padding: 32px 20px;
           }
           .back-home {
             top: 12px;
             left: 12px;
+=======
+            padding: 24px 20px;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
           .brand-icon {
             width: 48px;

@@ -38,6 +38,7 @@ export default function CreateProject() {
     e.preventDefault();
     setLoading(true);
     try {
+<<<<<<< HEAD
       // Backend fieldlariga moslashtirish: liveLink -> demo_link, githubLink -> repo_link
       const payload = {
         title: form.title,
@@ -48,6 +49,9 @@ export default function CreateProject() {
         image: file,
       };
       await ProjectsService.postProject(payload);
+=======
+      await ProjectsService.postProject({ ...form, image: file });
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       router.push("/admin/projects");
     } catch (error) {
       console.error("Error creating project:", error);

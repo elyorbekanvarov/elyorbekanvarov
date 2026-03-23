@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { useState } from "react";
@@ -144,5 +145,38 @@ export default function Navbar() {
         }
       `}</style>
     </>
+=======
+import Link from "next/link";
+export default function Navbar() {
+  return (
+    <nav>
+      <div className="nav container">
+        <div className="logo">
+          <span>Elyorbek</span>
+        </div>
+
+        <ul className="nav-links">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div className="hire-me">
+          <Link href={"login"}>Login</Link>
+        </div>
+      </div>
+    </nav>
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   );
 }

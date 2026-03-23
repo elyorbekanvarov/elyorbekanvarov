@@ -5,6 +5,7 @@ export interface About {
   name: string;
   role?: string;
   bio: string;
+<<<<<<< HEAD
   image?: File | string | null;
   image_url?: string;
   cv_link?: string;
@@ -30,6 +31,11 @@ export interface AboutData {
   cards: AboutCard[];
   techStack: string[];
   stats: AboutStat[];
+=======
+  image?: string;
+  image_url?: string;
+  cv_link?: string;
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
 }
 
 export const AboutService = {
@@ -37,10 +43,15 @@ export const AboutService = {
     const res = await api.get("about/");
     return res.data.results || res.data;
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   getAboutById: async (id: number): Promise<About> => {
     const res = await api.get(`about/${id}/`);
     return res.data;
   },
+<<<<<<< HEAD
   postAbout: async (data: Partial<About>) => {
     const formData = new FormData();
     Object.keys(data).forEach((key) => {
@@ -86,3 +97,20 @@ export const aboutData = {
   bio: "I'm a passionate Frontend Developer with a strong focus on creating beautiful, functional, and user-friendly web experiences.",
   image: "/images/png/about.png",
 };
+=======
+
+  postAbout: async (data: Partial<About>) => {
+    const res = await api.post("about/", data);
+    return res.data;
+  },
+
+  putAbout: async (id: number, data: Partial<About>): Promise<About> => {
+    const res = await api.put(`about/${id}/`, data);
+    return res.data;
+  },
+
+  deleteAbout: async (id: number): Promise<void> => {
+    await api.delete(`about/${id}/`);
+  },
+};
+>>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
