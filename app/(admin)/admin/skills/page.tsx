@@ -12,13 +12,9 @@ export default function SkillsPage() {
     name: "",
     description: "",
     percentage: 50,
-<<<<<<< HEAD
     skillType: "technical",
   });
 
-=======
-  });
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   const fetchSkills = async () => {
     try {
       const data = await SkillsService.getSkills();
@@ -36,25 +32,18 @@ export default function SkillsPage() {
 
   const handleSave = async () => {
     try {
-<<<<<<< HEAD
       const payload: Partial<Skill> = {
         name: form.name,
         description: form.description || "",
         category: form.skillType,
       };
+      
       if (form.skillType === "technical") {
         payload.percentage = form.percentage;
       } else {
         payload.percentage = 0;
       }
 
-=======
-      const payload = {
-        name: form.name,
-        description: form.description || "",
-        percentage: form.percentage,
-      };
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       if (editing) {
         await SkillsService.putSkill(editing.id!, payload);
       } else {
@@ -63,16 +52,12 @@ export default function SkillsPage() {
       fetchSkills();
       setShowModal(false);
       setEditing(null);
-<<<<<<< HEAD
       setForm({
         name: "",
         description: "",
         percentage: 50,
         skillType: "technical",
       });
-=======
-      setForm({ name: "", description: "", percentage: 50 });
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
     } catch (error: any) {
       console.error("Error saving skill:", error);
       alert("Error saving skill");
@@ -106,71 +91,34 @@ export default function SkillsPage() {
             animation: spin 1s linear infinite;
           }
           @keyframes spin {
-            to {
-              transform: rotate(360deg);
-            }
+            to { transform: rotate(360deg); }
           }
         `}</style>
       </div>
     );
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
   return (
     <div className="skills-page">
       <div className="page-header">
         <div>
           <h1>Skills Library</h1>
-<<<<<<< HEAD
-          <p>
-            Manage soft skills (card view) and technical skills (progress bar)
-          </p>
-=======
-          <p>Organize and manage your technical expertise</p>
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
+          <p>Manage soft skills (card view) and technical skills (progress bar)</p>
         </div>
         <button className="btn-create" onClick={() => setShowModal(true)}>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-<<<<<<< HEAD
-=======
-            strokeLinecap="round"
-            strokeLinejoin="round"
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
-          >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M12 5v14M5 12h14" />
           </svg>
           New Skill
         </button>
       </div>
-<<<<<<< HEAD
 
       <div className="skills-grid">
         {skills.map((skill) => (
-          <div
-            key={skill.id}
-            className={`skill-card ${skill.category === "soft" ? "soft" : "tech"}`}
-          >
+          <div key={skill.id} className={`skill-card ${skill.category === "soft" ? "soft" : "tech"}`}>
             <div className="skill-card-header">
               <div className="skill-icon-wrapper">
-                <span className="skill-icon">
-                  {skill.category === "soft" ? "✨" : "💻"}
-                </span>
-=======
-      <div className="skills-grid">
-        {skills.map((skill) => (
-          <div key={skill.id} className="skill-card">
-            <div className="skill-card-header">
-              <div className="skill-icon-wrapper">
-                <span className="skill-icon">💻</span>
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
+                <span className="skill-icon">{skill.category === "soft" ? "✨" : "💻"}</span>
               </div>
               <div className="skill-actions">
                 <button
@@ -181,23 +129,12 @@ export default function SkillsPage() {
                       name: skill.name,
                       description: skill.description || "",
                       percentage: skill.percentage || 50,
-<<<<<<< HEAD
-                      skillType:
-                        skill.category === "soft" ? "soft" : "technical",
-=======
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
+                      skillType: skill.category === "soft" ? "soft" : "technical",
                     });
                     setShowModal(true);
                   }}
                 >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M17 3l4 4-7 7H10v-4l7-7z" />
                     <path d="M4 20h16" />
                   </svg>
@@ -206,14 +143,7 @@ export default function SkillsPage() {
                   className="action-delete"
                   onClick={() => handleDelete(skill.id!)}
                 >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
                   </svg>
                 </button>
@@ -221,45 +151,22 @@ export default function SkillsPage() {
             </div>
             <div className="skill-card-body">
               <h3 className="skill-name">{skill.name}</h3>
-              {skill.description && (
-                <p className="skill-description">{skill.description}</p>
-              )}
+              {skill.description && <p className="skill-description">{skill.description}</p>}
               <div className="skill-meta">
-<<<<<<< HEAD
-                <span
-                  className={`skill-badge ${skill.category === "soft" ? "soft" : "tech"}`}
-                >
-                  {skill.category === "soft"
-                    ? "✨ Soft Skill"
-                    : "⚡ Technical Skill"}
+                <span className={`skill-badge ${skill.category === "soft" ? "soft" : "tech"}`}>
+                  {skill.category === "soft" ? "✨ Soft Skill" : "⚡ Technical Skill"}
                 </span>
                 {skill.category !== "soft" && (
                   <div className="skill-level">
                     <div className="level-bar">
-                      <div
-                        className="level-fill"
-                        style={{ width: `${skill.percentage || 0}%` }}
-                      ></div>
+                      <div className="level-fill" style={{ width: `${skill.percentage || 0}%` }}></div>
                     </div>
-                    <span className="level-value">
-                      {skill.percentage || 0}%
-                    </span>
+                    <span className="level-value">{skill.percentage || 0}%</span>
                   </div>
                 )}
                 {skill.category === "soft" && (
                   <span className="card-view-badge">📇 Card View</span>
                 )}
-=======
-                <div className="skill-level">
-                  <div className="level-bar">
-                    <div
-                      className="level-fill"
-                      style={{ width: `${skill.percentage || 0}%` }}
-                    ></div>
-                  </div>
-                  <span className="level-value">{skill.percentage || 0}%</span>
-                </div>
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
               </div>
             </div>
           </div>
@@ -271,65 +178,28 @@ export default function SkillsPage() {
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h2>{editing ? "Edit Skill" : "Create New Skill"}</h2>
-              <button
-                className="modal-close"
-                onClick={() => setShowModal(false)}
-              >
-                ✕
-              </button>
+              <button className="modal-close" onClick={() => setShowModal(false)}>✕</button>
             </div>
             <div className="modal-body">
               <div className="form-group">
-                <label>
-                  Skill Name <span>*</span>
-                </label>
-                <input
-                  type="text"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="e.g., React, Leadership"
-                />
+                <label>Skill Name <span>*</span></label>
+                <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="e.g., React, Leadership" />
               </div>
               <div className="form-group">
                 <label>Description</label>
-                <textarea
-                  rows={3}
-                  value={form.description}
-                  onChange={(e) =>
-                    setForm({ ...form, description: e.target.value })
-                  }
-                  placeholder="Describe the skill..."
-                />
+                <textarea rows={3} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} placeholder="Describe the skill..." />
               </div>
-<<<<<<< HEAD
               <div className="form-group">
                 <label>Skill Type</label>
-                <select
-                  value={form.skillType}
-                  onChange={(e) =>
-                    setForm({ ...form, skillType: e.target.value })
-                  }
-                >
+                <select value={form.skillType} onChange={(e) => setForm({ ...form, skillType: e.target.value })}>
                   <option value="soft">✨ Soft Skill (Card View)</option>
-                  <option value="technical">
-                    ⚡ Technical Skill (Progress Bar)
-                  </option>
+                  <option value="technical">⚡ Technical Skill (Progress Bar)</option>
                 </select>
               </div>
               {form.skillType === "technical" && (
                 <div className="form-group range-group">
-                  <label>
-                    Proficiency Level: <strong>{form.percentage}%</strong>
-                  </label>
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={form.percentage}
-                    onChange={(e) =>
-                      setForm({ ...form, percentage: parseInt(e.target.value) })
-                    }
-                  />
+                  <label>Proficiency Level: <strong>{form.percentage}%</strong></label>
+                  <input type="range" min="0" max="100" value={form.percentage} onChange={(e) => setForm({ ...form, percentage: parseInt(e.target.value) })} />
                   <div className="range-marks">
                     <span>Beginner</span>
                     <span>Intermediate</span>
@@ -337,38 +207,10 @@ export default function SkillsPage() {
                   </div>
                 </div>
               )}
-=======
-              <div className="form-group range-group">
-                <label>
-                  Proficiency Level: <strong>{form.percentage}%</strong>
-                </label>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={form.percentage}
-                  onChange={(e) =>
-                    setForm({ ...form, percentage: parseInt(e.target.value) })
-                  }
-                />
-                <div className="range-marks">
-                  <span>Beginner</span>
-                  <span>Intermediate</span>
-                  <span>Expert</span>
-                </div>
-              </div>
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
             </div>
             <div className="modal-footer">
-              <button
-                className="btn-cancel"
-                onClick={() => setShowModal(false)}
-              >
-                Cancel
-              </button>
-              <button className="btn-save" onClick={handleSave}>
-                Save Skill
-              </button>
+              <button className="btn-cancel" onClick={() => setShowModal(false)}>Cancel</button>
+              <button className="btn-save" onClick={handleSave}>Save Skill</button>
             </div>
           </div>
         </div>
@@ -411,11 +253,11 @@ export default function SkillsPage() {
           font-size: 14px;
           cursor: pointer;
           transition: all 0.2s;
-          box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+          box-shadow: 0 4px 12px rgba(79,70,229,0.25);
         }
         .btn-create:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+          box-shadow: 0 8px 20px rgba(79,70,229,0.35);
         }
         .skills-grid {
           display: grid;
@@ -427,12 +269,12 @@ export default function SkillsPage() {
           border-radius: 24px;
           overflow: hidden;
           transition: all 0.3s;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.05);
           border: 1px solid #f1f5f9;
         }
         .skill-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
           border-color: #e2e8f0;
         }
         .skill-card-header {
@@ -457,8 +299,7 @@ export default function SkillsPage() {
           display: flex;
           gap: 8px;
         }
-        .action-edit,
-        .action-delete {
+        .action-edit, .action-delete {
           width: 32px;
           height: 32px;
           border-radius: 10px;
@@ -508,7 +349,6 @@ export default function SkillsPage() {
           flex-direction: column;
           gap: 12px;
         }
-<<<<<<< HEAD
         .skill-badge {
           display: inline-block;
           padding: 4px 12px;
@@ -534,8 +374,6 @@ export default function SkillsPage() {
           display: inline-block;
           width: fit-content;
         }
-=======
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         .skill-level {
           display: flex;
           align-items: center;
@@ -567,7 +405,7 @@ export default function SkillsPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0,0,0,0.5);
           backdrop-filter: blur(4px);
           display: flex;
           align-items: center;
@@ -581,18 +419,12 @@ export default function SkillsPage() {
           max-width: 520px;
           max-height: 90vh;
           overflow: auto;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
           animation: modalFadeIn 0.2s ease;
         }
         @keyframes modalFadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
         }
         .modal-header {
           display: flex;
@@ -640,9 +472,7 @@ export default function SkillsPage() {
         .form-group label span {
           color: #ef4444;
         }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group input, .form-group select, .form-group textarea {
           width: 100%;
           padding: 12px 16px;
           border: 1px solid #e2e8f0;
@@ -651,20 +481,15 @@ export default function SkillsPage() {
           transition: all 0.2s;
           background: #fafcff;
         }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
           outline: none;
           border-color: #4f46e5;
-          box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+          box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
           background: white;
         }
-<<<<<<< HEAD
-=======
         .range-group {
           margin-top: 8px;
         }
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         .range-group input {
           padding: 0;
           margin: 12px 0;
@@ -691,10 +516,6 @@ export default function SkillsPage() {
           cursor: pointer;
           font-weight: 500;
           font-size: 14px;
-<<<<<<< HEAD
-=======
-          transition: all 0.2s;
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .btn-cancel:hover {
           background: #e2e8f0;
@@ -708,14 +529,10 @@ export default function SkillsPage() {
           cursor: pointer;
           font-weight: 600;
           font-size: 14px;
-<<<<<<< HEAD
-=======
-          transition: all 0.2s;
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
         }
         .btn-save:hover {
           transform: translateY(-1px);
-          box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+          box-shadow: 0 4px 12px rgba(79,70,229,0.3);
         }
         @media (max-width: 768px) {
           .skills-grid {

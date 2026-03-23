@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 "use client";
 
 import Link from "next/link";
 
-=======
-"use client"
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
 export default function AuthLayout({
   children,
 }: {
@@ -20,7 +16,6 @@ export default function AuthLayout({
         />
       </div>
       <div className="auth-form-container">
-<<<<<<< HEAD
         <div className="auth-content">
           <Link href="/" className="back-home">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -31,9 +26,6 @@ export default function AuthLayout({
           </Link>
           {children}
         </div>
-=======
-        {children}
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
       </div>
 
       <style jsx>{`
@@ -63,7 +55,6 @@ export default function AuthLayout({
           background: linear-gradient(145deg, #0f172a 0%, #1e1b4b 100%);
           padding: 24px;
         }
-<<<<<<< HEAD
         .auth-content {
           position: relative;
           width: 100%;
@@ -97,8 +88,6 @@ export default function AuthLayout({
         .back-home:hover svg {
           transform: translateX(-2px);
         }
-=======
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
 
         /* Responsive */
         @media (max-width: 900px) {
@@ -116,14 +105,10 @@ export default function AuthLayout({
           }
           .auth-form-container {
             flex: 1;
-<<<<<<< HEAD
             padding: 48px 24px 32px;
           }
           .back-home {
             top: -40px;
-=======
-            padding: 32px 24px;
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
         }
 
@@ -136,16 +121,12 @@ export default function AuthLayout({
             height: 150px;
           }
           .auth-form-container {
-<<<<<<< HEAD
             padding: 40px 20px 24px;
           }
           .back-home {
             top: -35px;
             padding: 6px 12px;
             font-size: 12px;
-=======
-            padding: 24px 20px;
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
         }
 
@@ -158,14 +139,10 @@ export default function AuthLayout({
             height: 120px;
           }
           .auth-form-container {
-<<<<<<< HEAD
             padding: 32px 16px 20px;
           }
           .back-home {
             top: -30px;
-=======
-            padding: 20px 16px;
->>>>>>> b23b969a5058c534f4f8421a4dd3108c16417f7b
           }
         }
       `}</style>
