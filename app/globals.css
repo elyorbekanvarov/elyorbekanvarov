@@ -1156,6 +1156,7 @@ footer {
   .timeline-item.right .timeline-icon {
     left: 30px;
   }
+
   .awards-items {
     flex-direction: column;
     align-items: center;
@@ -1202,242 +1203,322 @@ footer {
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
   }
+  .navbar, nav, .nav {
+    padding: 12px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav ul, .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li, .nav ul li {
+    margin: 0;
+  }
+
   .hire-me {
     display: none;
-    .nav {
-      flex-direction: column;
-      gap: 16px;
-    }
+  }
+  .section1 {
+    margin-top: 20px;
+    padding-top: 0;
+  }
 
-    ul {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+  .hello-title {
+    width: 160px;
+    height: 32px;
+  }
 
-    .hire-me a {
-      padding: 8px 20px;
-    }
-    .section1 {
-      margin-top: 80px;
-    }
+  .hello-title span {
+    font-size: 12px;
+  }
 
-    .hello-title {
-      width: 180px;
-      height: 36px;
-    }
+  .section1-title h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
 
-    .hello-title span {
-      font-size: 14px;
-    }
+  .section1-title p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    .section1-title h1 {
-      font-size: 36px;
-      line-height: 44px;
-    }
+  .section1-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
 
-    .section1-title p {
-      font-size: 16px;
-      line-height: 24px;
-    }
+  .section1-btns button {
+    width: 100%;
+    padding: 12px 24px;
+  }
 
-    .section1-btns {
-      flex-direction: column;
-      width: 100%;
-      gap: 12px;
-    }
+  .section1-img img {
+    width: 280px;
+    height: 280px;
+  }
 
-    .section1-btns button {
-      width: 100%;
-      padding: 12px 24px;
-    }
+  .section1-links {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-    .section1-img img {
-      width: 280px;
-      height: 280px;
-    }
+  .section1-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    .section1-links {
-      justify-content: center;
-      gap: 20px;
-    }
+  .section1-links img {
+    width: 24px;
+    height: 24px;
+  }
 
-    .section1-bottom {
-      margin-top: 40px;
-    }
-    .section2-wrapper h2,
-    .section3 h2,
-    .section4 h2,
-    .experience-title,
-    .section6 h2 {
-      font-size: 32px;
-    }
+  .section1-bottom {
+    margin-top: 40px;
+  }
+  .section2-wrapper h2,
+  .section3 h2,
+  .section4 h2,
+  .experience-title,
+  .section6 h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 
-    .skills {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
+  .skill {
+    padding: 24px;
+    text-align: center;
+  }
 
-    .skill {
-      padding: 24px;
-      text-align: center;
-    }
+  .skill-icon {
+    margin: 0 auto 20px auto;
+  }
 
-    .skill-icon {
-      margin: 0 auto 20px auto;
-    }
+  .technical {
+    padding: 24px;
+  }
 
-    .technical {
-      padding: 24px;
-    }
+  .technical h3 {
+    font-size: 20px;
+  }
 
-    .technical h3 {
-      font-size: 20px;
-    }
+  .tech-info {
+    font-size: 14px;
+  }
+  .section4-card-title {
+    padding: 24px 20px 20px 20px;
+  }
 
-    .tech-info {
-      font-size: 14px;
-    }
+  .section4-card-title span {
+    font-size: 20px;
+  }
 
-    .section4-card-title {
-      padding: 24px 20px 20px 20px;
-    }
+  .section4-card-title > p {
+    font-size: 14px;
+  }
 
-    .section4-card-title span {
-      font-size: 20px;
-    }
+  .section4-card-title .p {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-    .section4-card-title > p {
-      font-size: 14px;
-    }
-    .section4-card-title .p {
-      flex-wrap: wrap;
-    }
+  .section4-card-title .p p {
+    font-size: 10px;
+  }
+  .experience-section {
+    padding: 40px 0;
+  }
 
-    .section4-card-title .p p {
-      font-size: 10px;
-    }
-    .section4-card .p {
-      flex-wrap: wrap;
-    }
+  .experience-title {
+    margin-bottom: 32px;
+  }
 
-    .section4-card .p p {
-      font-size: 10px;
-    }
-    .experience-section {
-      padding: 60px 0;
-    }
+  .timeline-card {
+    padding: 20px;
+  }
 
-    .experience-title {
-      margin-bottom: 48px;
-    }
+  .timeline-card h3 {
+    font-size: 18px;
+  }
 
-    .timeline-card {
-      padding: 20px;
-    }
+  .timeline-card h4 {
+    font-size: 14px;
+  }
 
-    .timeline-card h3 {
-      font-size: 18px;
-    }
+  .timeline-card p {
+    font-size: 14px;
+  }
 
-    .timeline-card h4 {
-      font-size: 14px;
-    }
+  .timeline-icon {
+    width: 48px;
+    height: 48px;
+  }
 
-    .timeline-card p {
-      font-size: 14px;
-    }
+  .timeline-icon img {
+    width: 24px;
+    height: 24px;
+  }
 
-    .timeline-icon {
-      width: 48px;
-      height: 48px;
-    }
+  .year {
+    font-size: 10px;
+  }
+  .awards-section {
+    padding: 24px;
+  }
 
-    .timeline-icon img {
-      width: 24px;
-      height: 24px;
-    }
+  .awards-title {
+    font-size: 20px;
+  }
 
-    .year {
-      font-size: 10px;
-    }
-    .awards-section {
-      padding: 24px;
-    }
+  .award h4 {
+    font-size: 14px;
+  }
 
-    .awards-title {
-      font-size: 20px;
-    }
+  .award p {
+    font-size: 12px;
+  }
+  .section6 {
+    padding: 40px 0;
+  }
 
-    .award h4 {
-      font-size: 14px;
-    }
+  .section6 p {
+    font-size: 16px;
+    padding: 0 16px;
+    text-align: center;
+  }
 
-    .award p {
-      font-size: 12px;
-    }
-    .section6 {
-      padding: 60px 0;
-    }
+  .section6-contact input,
+  .section6-contact textarea {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+  }
 
-    .section6 p {
-      font-size: 16px;
-      padding: 0 16px;
-    }
+  .contact-information,
+  .connect,
+  .available {
+    padding: 20px;
+  }
 
-    .section6-contact input,
-    .section6-contact textarea {
-      padding: 12px;
-    }
+  .contact-information h4,
+  .connect h4,
+  .available h4 {
+    font-size: 20px;
+  }
 
-    .contact-information,
-    .connect,
-    .available {
-      padding: 24px;
-    }
+  .contact-info {
+    gap: 12px;
+  }
 
-    .contact-information h4,
-    .connect h4,
-    .available h4 {
-      font-size: 20px;
-    }
+  .contact-info p {
+    font-size: 12px;
+    word-break: break-word;
+  }
 
-    .contact-info p {
-      font-size: 12px;
-    }
+  .contact-img img {
+    width: 20px;
+    height: 20px;
+  }
 
-    .connect-link {
-      padding: 6px 12px;
-      font-size: 14px;
-    }
+  .connect-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
 
-    .connect-link img {
-      width: 20px;
-      height: 20px;
-    }
-    .footer-wrapper {
-      flex-direction: column;
-      gap: 16px;
-      text-align: center;
-      padding-top: 24px;
-    }
+  .connect-link {
+    padding: 8px 16px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    .footer-links {
-      gap: 16px;
-    }
+  .connect-link img {
+    width: 18px;
+    height: 18px;
+  }
 
-    .footer-title p {
-      font-size: 12px;
-    }
+  /* Footer - asosiy tuzatish */
+  footer, .footer {
+    padding: 32px 0 24px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    padding: 6px 0;
+    white-space: nowrap;
+  }
+
+  .footer-title p {
+    font-size: 12px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-social img {
+    width: 20px;
+    height: 20px;
+  }
+  input, textarea, select, button {
+    font-size: 16px;
   }
 }
 @media (max-width: 480px) {
   .container {
     padding: 0 12px;
+  }
+
+  .section1 {
+    margin-top: 12px;
   }
 
   .section1-title h1 {
@@ -1521,40 +1602,22 @@ footer {
     max-width: 100%;
   }
 
-  .connect-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .contact {
-    gap: 12px;
-  }
-
-  .contact-img img {
-    width: 20px;
-    height: 20px;
-  }
-
   .contact-info h5 {
     font-size: 14px;
   }
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .container {
-    max-width: 1000px;
+
+  .connect-link {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
-  .section1-img img {
-    width: 420px;
-    height: 420px;
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  .skills {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section4-cards {
-    gap: 24px;
+  .footer-links a {
+    font-size: 12px;
   }
 }
 @media (min-width: 1400px) {
@@ -1589,12 +1652,6 @@ footer {
   .skill:hover,
   .section4-card:hover {
     transform: translateY(-5px);
-  }
-}
-@media (max-width: 768px) {
-  input,
-  textarea,
-  select {
-    font-size: 16px;
+    transition: transform 0.3s ease;
   }
 }
