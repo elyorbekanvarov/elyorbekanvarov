@@ -122,12 +122,14 @@ export default function Navbar() {
           background: rgba(124, 58, 237, 0.15);
           color: #7c3aed;
         }
-        .mobile-login a {
-          background: linear-gradient(135deg, #7c3aed, #9333ea);
-          color: white !important;
-          margin-top: 16px;
-          padding: 14px 24px;
-          border-radius: 40px;
+        .mobile-login {
+          background-color: #7c3aed;
+          padding: 8px 23.88px 8px 24px;
+          border-radius: 14px;
+          font-weight: 400;
+          font-size: 16px;
+          color: #ffffff;
+          transition: all 0.3s ease;
         }
         @media (max-width: 768px) {
           .nav-links {
