@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const menuItems = [
     { name: "About", href: "#about" },
@@ -17,6 +19,11 @@ export default function Navbar() {
 
   const handleLinkClick = () => {
     setIsOpen(false);
+  };
+
+  const handleLogin = () => {
+    setIsOpen(false);
+    router.push("/login");
   };
 
   return (
@@ -58,9 +65,9 @@ export default function Navbar() {
               </li>
             ))}
             <li className="mobile-login">
-              <Link href="/login" onClick={handleLinkClick}>
+              <button onClick={handleLogin} className="mobile-login-btn">
                 Login
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
@@ -124,12 +131,25 @@ export default function Navbar() {
         }
         .mobile-login {
           background-color: #7c3aed;
-          padding: 8px 23.88px 8px 24px;
           border-radius: 14px;
+          transition: all 0.3s ease;
+          margin-top: 8px;
+        }
+        .mobile-login-btn {
+          width: 100%;
+          background: transparent;
+          border: none;
+          padding: 8px 24px;
           font-weight: 400;
           font-size: 16px;
           color: #ffffff;
+          cursor: pointer;
+          border-radius: 14px;
           transition: all 0.3s ease;
+        }
+        .mobile-login-btn:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 14px;
         }
         @media (max-width: 768px) {
           .nav-links {
